@@ -12,12 +12,6 @@ namespace practive.Controllers
         {
             _logger = logger;
         }
-
-        /* Có 3 cách để truyền dữ liệu từ Controller sang view
-        Casch1 : Sử dụng ViewData
-        Cách 2: Sử dụng viewBag
-        c3: Sử dụng tempdata
-        */
         public IActionResult Index()
         {
             return View();

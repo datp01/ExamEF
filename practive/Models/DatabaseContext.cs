@@ -9,9 +9,9 @@ namespace practive.Models
         {
 
         }
-        DbSet<Student> Students { get; set; }
-        DbSet<Exam> Exams { get; set; }
-        DbSet<Subject> Subjects { get; set; }
+         public DbSet<Student> Students { get; set; }
+         public DbSet<Exam> Exams { get; set; }
+         public DbSet<Subject> Subjects { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

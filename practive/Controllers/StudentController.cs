@@ -1,14 +1,22 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using practive.Models;
+using SQLitePCL;
 
 namespace practive.Controllers
 {
     public class StudentController : Controller
     {
+        private readonly DatabaseContext _context;
+        public StudentController(DatabaseContext context)
+        {
+            _context = context;
+        }
         // GET: StudentController
         public ActionResult Index()
         {
-            return View();
+            return View(_context.Students.ToList());
         }
 
         // GET: StudentController/Details/5
