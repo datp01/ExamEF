@@ -20,7 +20,8 @@ namespace practive.Controllers
         // GET: SubjectController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            ViewBag.Id = id;
+            return View(_context.Students.Find(id));
         }
 
         // GET: SubjectController/Create

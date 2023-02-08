@@ -19,9 +19,10 @@ namespace practive.Controllers
         }
 
         // GET: ExamController/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(long id)
         {
-            return View();
+            ViewBag.Id = id;
+            return View(_context.Students.Find(id));
         }
 
         // GET: ExamController/Create
